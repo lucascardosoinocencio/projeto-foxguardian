@@ -1,0 +1,7 @@
+node_modules/
+tools/package-lock.json
+assents/
+images/_originals/
+review-shots/
+.DS_Store
+Thumbs.db
