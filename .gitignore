@@ -5,3 +5,5 @@ images/_originals/
 review-shots/
 .DS_Store
 Thumbs.db
+
+.vercel
