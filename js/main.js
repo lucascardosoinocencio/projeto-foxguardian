@@ -169,4 +169,67 @@
         visitCounter.remove();
       });
   }
+
+  const reviewsTrack = document.getElementById('reviewsTrack');
+  if (reviewsTrack) {
+    const cards = Array.from(reviewsTrack.querySelectorAll('.review-card'));
+    const prevBtn = document.getElementById('reviewsPrev');
+    const nextBtn = document.getElementById('reviewsNext');
+    const dotsWrap = document.getElementById('reviewsDots');
+
+    const dots = cards.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'reviews-dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Ir para avaliação ${i + 1}`);
+      dot.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+    if (dots.length) dots[0].classList.add('is-active');
+
+    const setActiveDot = (index) => {
+      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+    };
+
+    const updateActiveDotFromScroll = () => {
+      const pos = reviewsTrack.scrollLeft;
+      let closest = 0;
+      let closestGap = Infinity;
+      cards.forEach((card, i) => {
+        const gap = Math.abs(card.offsetLeft - reviewsTrack.offsetLeft - pos);
+        if (gap < closestGap) {
+          closestGap = gap;
+          closest = i;
+        }
+      });
+      setActiveDot(closest);
+    };
+
+    const scrollByCard = (dir) => {
+      const card = cards[0];
+      const gap = 20;
+      const amount = (card.getBoundingClientRect().width + gap) * dir;
+      reviewsTrack.scrollBy({ left: amount, behavior: 'smooth' });
+    };
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollByCard(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollByCard(1));
+
+    const updateArrows = () => {
+      if (!prevBtn || !nextBtn) return;
+      const max = reviewsTrack.scrollWidth - reviewsTrack.clientWidth - 4;
+      prevBtn.disabled = reviewsTrack.scrollLeft <= 4;
+      nextBtn.disabled = reviewsTrack.scrollLeft >= max;
+    };
+    const onReviewsScroll = () => {
+      updateArrows();
+      updateActiveDotFromScroll();
+    };
+    reviewsTrack.addEventListener('scroll', onReviewsScroll, { passive: true });
+    window.addEventListener('resize', updateActiveDotFromScroll, { passive: true });
+    updateArrows();
+    updateActiveDotFromScroll();
+  }
 })();
