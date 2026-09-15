@@ -43,6 +43,7 @@ const jobs = [
   { file: "logo-2-Photoroom.png", out: "logo-mark", widths: [640, 320, 160], keepAlpha: true },
   { file: "logo-intelbras.png", out: "brand-intelbras", widths: [400], keepAlpha: true },
   { file: "_Logotipo-PPA-2021_1684334289702.webp", out: "brand-ppa", widths: [400], keepAlpha: true },
+  { file: "logo-hikvision-transparent.png", out: "brand-hikvision", widths: [400], keepAlpha: true },
 ];
 
 (async () => {
