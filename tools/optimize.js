@@ -18,6 +18,8 @@ const trimList = new Set([
   "sistema-8000-sistema-de-alarme-sem-fio.webp",
   "sistema-alarmesimples-intelbras.webp",
   "video porteiro - intelbras.jpg",
+  "cftv-ip-hikvision-crop.png",
+  "kit-alarme-hikvision.webp",
 ]);
 
 const jobs = [
@@ -44,6 +46,8 @@ const jobs = [
   { file: "logo-intelbras.png", out: "brand-intelbras", widths: [400], keepAlpha: true },
   { file: "_Logotipo-PPA-2021_1684334289702.webp", out: "brand-ppa", widths: [400], keepAlpha: true },
   { file: "logo-hikvision-transparent.png", out: "brand-hikvision", widths: [400], keepAlpha: true },
+  { file: "cftv-ip-hikvision-crop.png", out: "cftv-ip-hikvision", widths: [900, 600] },
+  { file: "kit-alarme-hikvision.webp", out: "kit-alarme-hikvision", widths: [900, 600] },
 ];
 
 (async () => {
