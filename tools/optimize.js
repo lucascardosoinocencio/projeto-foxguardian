@@ -20,6 +20,7 @@ const trimList = new Set([
   "video porteiro - intelbras.jpg",
   "cftv-ip-hikvision-crop.png",
   "kit-alarme-hikvision.webp",
+  "controle-acesso-hikvision.webp",
 ]);
 
 const jobs = [
@@ -48,6 +49,7 @@ const jobs = [
   { file: "logo-hikvision-transparent.png", out: "brand-hikvision", widths: [400], keepAlpha: true },
   { file: "cftv-ip-hikvision-crop.png", out: "cftv-ip-hikvision", widths: [900, 600] },
   { file: "kit-alarme-hikvision.webp", out: "kit-alarme-hikvision", widths: [900, 600] },
+  { file: "controle-acesso-hikvision.webp", out: "controle-acesso-hikvision", widths: [900, 600] },
 ];
 
 (async () => {
