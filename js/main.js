@@ -74,13 +74,13 @@
 
   const radar = document.getElementById('radar');
   if (radar) {
-    const cities = radar.querySelectorAll('.radar-city');
+    const dots = radar.querySelectorAll('.radar-dot');
     const radarIO = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          cities.forEach(city => {
-            const delay = Number(city.dataset.delay || 0);
-            setTimeout(() => city.classList.add('is-visible'), delay);
+          dots.forEach(dot => {
+            const delay = Number(dot.dataset.delay || 0);
+            setTimeout(() => dot.classList.add('is-visible'), delay);
           });
           radarIO.unobserve(entry.target);
         }
@@ -93,8 +93,12 @@
   const cards = document.querySelectorAll('#catalogGrid .feed-card');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('is-active'));
+      filterBtns.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed', 'true');
       const filter = btn.dataset.filter;
       cards.forEach(card => {
         const match = filter === 'all' || card.dataset.cat === filter;
@@ -180,7 +184,6 @@
     const dots = cards.map((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'reviews-dot';
-      dot.setAttribute('role', 'tab');
       dot.setAttribute('aria-label', `Ir para avaliação ${i + 1}`);
       dot.addEventListener('click', () => {
         cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
@@ -191,7 +194,11 @@
     if (dots.length) dots[0].classList.add('is-active');
 
     const setActiveDot = (index) => {
-      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === index);
+        if (i === index) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
     };
 
     const updateActiveDotFromScroll = () => {

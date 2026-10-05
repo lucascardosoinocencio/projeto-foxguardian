@@ -27,17 +27,18 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<a class="skip-link" href="#inicio" style="position:absolute;left:-9999px;">Pular para o conteúdo</a>
+<a class="skip-link" href="#inicio">Pular para o conteúdo</a>
 
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a class="brand" href="#inicio">
-      <img src="images/logo-mark-160.webp" alt="Fox Guardian" width="38" height="38">
+      <img src="images/logo-mark-160.webp" alt="" width="38" height="38">
       <span class="brand-word">FOX <b>GUARDIAN</b></span>
     </a>
     <nav class="nav-links">
@@ -47,7 +48,7 @@
       <a href="#area-atendimento">Cobertura</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fox%20Guardian%20e%20quero%20solicitar%20um%20or%C3%A7amento.">
+      <a class="btn btn-primary" target="_blank" rel="noopener" aria-label="WhatsApp: pedir orçamento" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fox%20Guardian%20e%20quero%20solicitar%20um%20or%C3%A7amento.">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.53 3.69-8.21 8.26-8.21 2.2 0 4.27.86 5.83 2.42a8.15 8.15 0 0 1 2.41 5.8c0 4.53-3.69 8.2-8.24 8.2Zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.42 1.02 2.58.12.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
         <span class="long">WhatsApp</span>
       </a>
@@ -64,15 +65,13 @@
   </nav>
 </header>
 
-<main id="inicio">
+<main id="inicio" tabindex="-1">
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-fence" aria-hidden="true"></div>
-    <div class="hero-scan" aria-hidden="true"></div>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">CFTV · Alarme · Cerca elétrica · Concertina · Portão · Interfone</span>
         <h1 class="h-display">Segurança que <em>vigia</em> enquanto você vive.</h1>
         <p class="lede">Monitoramento 24 horas com ronda, instalação de CFTV, alarme, cerca elétrica, concertina, portão eletrônico e interfone, com equipamentos Intelbras, PPA e Hikvision, atendendo Bauru e região.</p>
         <div class="hero-cta">
@@ -91,9 +90,9 @@
       <div class="hero-panel">
         <picture>
           <source srcset="images/hero-central-900.webp" media="(max-width:700px)">
-          <img src="images/hero-central-1600.webp" alt="Central de monitoramento Fox Guardian com operador acompanhando câmeras em tempo real" width="900" height="1125" loading="eager">
+          <img src="images/hero-central-1600.webp" alt="Central de monitoramento Fox Guardian com operador acompanhando câmeras" width="900" height="1125" loading="eager" fetchpriority="high">
         </picture>
-        <span class="hero-panel-tag"><span class="rec-dot" aria-hidden="true"></span>AO VIVO</span>
+        <span class="hero-panel-tag">CENTRAL 24H</span>
         <div class="hero-panel-foot">CENTRAL · BAURU/SP</div>
       </div>
     </div>
@@ -103,7 +102,6 @@
   <section class="zones" id="servicos">
     <div class="container" style="padding-block:clamp(3rem,6vw,4.5rem) 0;">
       <div class="section-head reveal">
-        <span class="eyebrow">Painel de zonas</span>
         <h2 class="h-display">Cada serviço, uma zona protegida.</h2>
         <p>Como num painel de alarme real: cada frente do seu imóvel vira uma zona monitorada, com o equipamento certo para ela.</p>
       </div>
@@ -152,224 +150,10 @@
     </div>
   </section>
 
-  <!-- MARCAS -->
-  <section class="section" style="padding-block:clamp(3rem,6vw,4.5rem);">
-    <div class="container">
-      <div class="section-head reveal" style="margin-bottom:2rem;">
-        <span class="eyebrow">Equipamentos homologados</span>
-        <h2 class="h-display" style="font-size:clamp(2rem,4vw,2.6rem);">Marcas que sustentam a instalação.</h2>
-      </div>
-      <div class="brands-strip reveal">
-        <div class="brand-plate">
-          <div class="logo-wrap logo-wrap--intelbras"><img src="images/brand-intelbras-400.webp" alt="Intelbras" loading="lazy"></div>
-        </div>
-        <div class="brand-plate">
-          <div class="logo-wrap"><img src="images/brand-ppa-400.webp" alt="PPA" loading="lazy"></div>
-        </div>
-        <div class="brand-plate">
-          <div class="logo-wrap"><img src="images/brand-hikvision-400.webp" alt="Hikvision" loading="lazy"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- SOBRE -->
-  <section class="about section" id="sobre">
-    <div class="container about-grid">
-      <div class="about-copy reveal">
-        <span class="eyebrow">Fox Guardian</span>
-        <h2 class="h-display" style="font-size:clamp(2.2rem,4.6vw,3.2rem); margin-top:.6rem;">Quem instala é quem atende quando você precisa.</h2>
-        <p>A Fox Guardian nasceu para resolver um problema comum no mercado de segurança: empresa que vende pacote fechado sem conhecer o imóvel. Aqui, cada instalação começa com uma visita técnica real, e a central de monitoramento acompanha exatamente o que foi instalado naquele imóvel.</p>
-        <p>Trabalhamos com equipamentos Intelbras, PPA e Hikvision, homologados e com garantia de fábrica, escolhidos conforme o risco e o layout de cada casa, empresa ou condomínio.</p>
-        <div class="about-chips">
-          <span class="chip">Monitoramento 24h</span>
-          <span class="chip">Ronda</span>
-          <span class="chip">Visita técnica sem custo</span>
-          <span class="chip">Equipamentos com garantia</span>
-        </div>
-      </div>
-      <div class="reveal about-media">
-        <div class="hero-panel storefront-card">
-          <img src="images/fachada-loja-1400.webp" alt="Fachada da loja Fox Guardian, com sinalização Monitoramento 24h" width="1200" height="900" loading="lazy">
-          <span class="hero-panel-tag"><span class="rec-dot" aria-hidden="true"></span>LOJA FÍSICA</span>
-          <div class="hero-panel-foot">R. PADRE JOÃO, 1132 · VILA ALTINÓPOLIS · BAURU/SP</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROTOCOLO DE RESPOSTA -->
-  <section class="section" style="padding-block:0 clamp(4rem,9vw,7.5rem);">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Protocolo de resposta</span>
-        <h2 class="h-display">O que acontece quando o alarme dispara.</h2>
-        <p>Um passo a passo real, direto da nossa central.</p>
-      </div>
-      <div class="protocol-list reveal">
-        <div class="protocol-step">
-          <span class="num">01</span>
-          <h3>Disparo</h3>
-          <p>Sensor ou cerca aciona a central em tempo real.</p>
-        </div>
-        <div class="protocol-step">
-          <span class="num">02</span>
-          <h3>Verificação</h3>
-          <p>Operador confirma o alerta pelas câmeras do local.</p>
-        </div>
-        <div class="protocol-step">
-          <span class="num">03</span>
-          <h3>Acionamento</h3>
-          <p>Ronda é despachada e o cliente é avisado por telefone.</p>
-        </div>
-        <div class="protocol-step">
-          <span class="num">04</span>
-          <h3>Resposta</h3>
-          <p>Equipe no local avalia e registra a ocorrência.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CATÁLOGO -->
-  <section class="catalog section" id="catalogo">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Catálogo</span>
-        <h2 class="h-display">Equipamentos que instalamos.</h2>
-        <p>Linha completa Intelbras, PPA e Hikvision: cada item abaixo pode compor o seu orçamento.</p>
-      </div>
-
-      <div class="filter-row reveal" role="tablist" aria-label="Filtrar catálogo por categoria">
-        <button class="filter-btn is-active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="cftv">CFTV</button>
-        <button class="filter-btn" data-filter="alarme">Alarme</button>
-        <button class="filter-btn" data-filter="cerca">Cerca &amp; concertina</button>
-        <button class="filter-btn" data-filter="acesso">Controle de acesso</button>
-        <button class="filter-btn" data-filter="portao">Portão eletrônico</button>
-      </div>
-
-      <div class="catalog-grid reveal" id="catalogGrid">
-
-        <article class="feed-card" data-cat="cftv">
-          <div class="feed-label"><span class="cam">CAM 01</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/kit-cftv-900.webp" alt="Kit CFTV Intelbras com 4 câmeras e gravador" loading="lazy"></div>
-          <div class="feed-caption"><h3>Kit CFTV 4 câmeras</h3><p>Gravador + câmeras full HD, visão noturna.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cftv">
-          <div class="feed-label"><span class="cam">CAM 02</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/camera-intelbras-900.webp" alt="Câmera de segurança Intelbras" loading="lazy"></div>
-          <div class="feed-caption"><h3>Câmera bullet HD</h3><p>Instalação interna ou externa.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cftv">
-          <div class="feed-label"><span class="cam">CAM 03</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/cameraim7-intelbras-900.webp" alt="Câmera Intelbras iM7 com sensor de imagem" loading="lazy"></div>
-          <div class="feed-caption"><h3>Câmeras Wi-Fi</h3><p>Alta resolução para áreas críticas.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cftv">
-          <div class="feed-label"><span class="cam">CAM 04</span><span class="brand-tag">Hikvision</span></div>
-          <div class="feed-media"><img src="images/cftv-ip-hikvision-900.webp" alt="Linha de câmeras IP Hikvision com gravador em rede" loading="lazy"></div>
-          <div class="feed-caption"><h3>Linha CFTV Hikvision</h3><p>Câmeras bullet, dome e speed dome com gravador em rede.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="alarme">
-          <div class="feed-label"><span class="cam">ZN 01</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/sistema-alarme-8000-900.webp" alt="Sistema de alarme sem fio Intelbras 8000" loading="lazy"></div>
-          <div class="feed-caption"><h3>Alarme sem fio 8000</h3><p>Sensores sem fio, fácil expansão.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="alarme">
-          <div class="feed-label"><span class="cam">ZN 02</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/sistema-alarme-simples-900.webp" alt="Sistema de alarme simples Intelbras" loading="lazy"></div>
-          <div class="feed-caption"><h3>Alarme residencial</h3><p>Solução direta para casas e apartamentos.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="alarme">
-          <div class="feed-label"><span class="cam">ZN 06</span><span class="brand-tag">Hikvision</span></div>
-          <div class="feed-media"><img src="images/kit-alarme-hikvision-900.webp" alt="Kit de alarme sem fio Hikvision com sensores e sirene" loading="lazy"></div>
-          <div class="feed-caption"><h3>Kit alarme Hikvision</h3><p>Central, sensores e sirene para monitoramento sem fio.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cerca">
-          <div class="feed-label"><span class="cam">ZN 03</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/cerca-eletrica-900.webp" alt="Central de cerca elétrica Intelbras com bateria" loading="lazy"></div>
-          <div class="feed-caption"><h3>Central de cerca elétrica</h3><p>Choque dissuasivo integrado ao alarme.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cerca">
-          <div class="feed-label"><span class="cam">ZN 04</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/kit-cerca-eletrica-900.webp" alt="Kit completo de cerca elétrica Intelbras" loading="lazy"></div>
-          <div class="feed-caption"><h3>Kit cerca elétrica</h3><p>Central, hastes e fios para o perímetro.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="cerca">
-          <div class="feed-label"><span class="cam">ZN 05</span><span class="brand-tag">Perimetral</span></div>
-          <div class="feed-media"><img src="images/concertina-2-900.webp" alt="Concertina instalada sobre muro" loading="lazy"></div>
-          <div class="feed-caption"><h3>Concertina navalha</h3><p>Barreira física visível para muros e muralhas.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="acesso">
-          <div class="feed-label"><span class="cam">AC 01</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/controlador-facial-900.webp" alt="Controlador de acesso facial com biometria Intelbras" loading="lazy"></div>
-          <div class="feed-caption"><h3>Acesso facial + biometria</h3><p>Reconhecimento facial e digital em um só ponto.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="acesso">
-          <div class="feed-label"><span class="cam">AC 02</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media"><img src="images/controle-acesso-a-900.webp" alt="Controle de acesso Intelbras com aplicativo" loading="lazy"></div>
-          <div class="feed-caption"><h3>Controle de acesso</h3><p>Liberação por app, senha ou cartão.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="acesso">
-          <div class="feed-label"><span class="cam">AC 03</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media feed-media--transparent"><img src="images/porteiro-simples-900.webp" alt="Interfone Intelbras porteiro simples" loading="lazy"></div>
-          <div class="feed-caption"><h3>Interfone porteiro</h3><p>Comunicação direta com a portaria.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="acesso">
-          <div class="feed-label"><span class="cam">AC 04</span><span class="brand-tag">Intelbras</span></div>
-          <div class="feed-media feed-media--transparent"><img src="images/video-porteiro-900.webp" alt="Vídeo porteiro Intelbras com tela colorida" loading="lazy"></div>
-          <div class="feed-caption"><h3>Vídeo porteiro</h3><p>Veja quem chamou antes de atender.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="acesso">
-          <div class="feed-label"><span class="cam">AC 05</span><span class="brand-tag">Hikvision</span></div>
-          <div class="feed-media feed-media--transparent"><img src="images/controle-acesso-hikvision-900.webp" alt="Terminal de controle de acesso facial Hikvision" loading="lazy"></div>
-          <div class="feed-caption"><h3>Acesso facial Hikvision</h3><p>Reconhecimento facial com leitor de cartão integrado.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="portao">
-          <div class="feed-label"><span class="cam">PT 01</span><span class="brand-tag">PPA</span></div>
-          <div class="feed-media feed-media--transparent"><img src="images/motor-basculante-900.webp" alt="Motor basculante PPA para portão" loading="lazy"></div>
-          <div class="feed-caption"><h3>Motor basculante</h3><p>Para portões de abrir para cima.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="portao">
-          <div class="feed-label"><span class="cam">PT 02</span><span class="brand-tag">PPA</span></div>
-          <div class="feed-media"><img src="images/motor-deslizante-900.webp" alt="Motor deslizante PPA para portão" loading="lazy"></div>
-          <div class="feed-caption"><h3>Motor deslizante</h3><p>Para portões correr / de arrastar.</p></div>
-        </article>
-
-        <article class="feed-card" data-cat="portao">
-          <div class="feed-label"><span class="cam">PT 03</span><span class="brand-tag">PPA</span></div>
-          <div class="feed-media feed-media--transparent"><img src="images/cancela-ppa-900.webp" alt="Cancela automática PPA" loading="lazy"></div>
-          <div class="feed-caption"><h3>Cancela automática</h3><p>Controle de entrada para veículos.</p></div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
   <!-- AVALIAÇÕES -->
   <section class="reviews section" id="avaliacoes">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Avaliações reais</span>
         <h2 class="h-display">Quem contratou, recomenda.</h2>
         <p>Direto do nosso perfil no Google, sem filtro.</p>
       </div>
@@ -529,7 +313,234 @@
         </button>
       </div>
 
-      <div class="reviews-dots" id="reviewsDots" role="tablist" aria-label="Selecionar avaliação"></div>
+      <div class="reviews-dots" id="reviewsDots" role="group" aria-label="Selecionar avaliação"></div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="section brands-section">
+    <div class="container">
+      <div class="section-head reveal brands-head">
+        <h2 class="h-display">Marcas que sustentam a instalação.</h2>
+      </div>
+      <div class="brands-strip reveal">
+        <div class="brand-plate">
+          <div class="logo-wrap logo-wrap--intelbras"><img src="images/brand-intelbras-400.webp" alt="Intelbras" loading="lazy" width="528" height="525"></div>
+        </div>
+        <div class="brand-plate">
+          <div class="logo-wrap"><img src="images/brand-ppa-400.webp" alt="PPA" loading="lazy" width="1764" height="844"></div>
+        </div>
+        <div class="brand-plate">
+          <div class="logo-wrap"><img src="images/brand-hikvision-400.webp" alt="Hikvision" loading="lazy" width="400" height="53"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SOBRE -->
+  <section class="about section" id="sobre">
+    <div class="container about-grid">
+      <div class="about-copy reveal">
+        <h2 class="h-display" style="font-size:clamp(2.2rem,4.6vw,3.2rem);">Quem instala é quem atende quando você precisa.</h2>
+        <p>A Fox Guardian nasceu para resolver um problema comum no mercado de segurança: empresa que vende pacote fechado sem conhecer o imóvel. Aqui, cada instalação começa com uma visita técnica real, e a central de monitoramento acompanha exatamente o que foi instalado naquele imóvel.</p>
+        <p>Trabalhamos com equipamentos Intelbras, PPA e Hikvision, homologados e com garantia de fábrica, escolhidos conforme o risco e o layout de cada casa, empresa ou condomínio.</p>
+        <div class="about-chips">
+          <span class="chip">Monitoramento 24h</span>
+          <span class="chip">Ronda</span>
+          <span class="chip">Visita técnica sem custo</span>
+          <span class="chip">Equipamentos com garantia</span>
+        </div>
+      </div>
+      <div class="reveal about-media">
+        <div class="hero-panel storefront-card">
+          <img src="images/fachada-loja-1400.webp" alt="Fachada da loja Fox Guardian, com sinalização Monitoramento 24h" width="1200" height="900" loading="lazy">
+          <span class="hero-panel-tag">LOJA FÍSICA</span>
+          <div class="hero-panel-foot">R. PADRE JOÃO, 1132 · VILA ALTINÓPOLIS · BAURU/SP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOLO DE RESPOSTA -->
+  <section class="section" style="padding-block:0 clamp(4rem,9vw,7.5rem);">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="h-display">O que acontece quando o alarme dispara.</h2>
+        <p>Um passo a passo real, direto da nossa central.</p>
+      </div>
+      <div class="protocol-list reveal">
+        <div class="protocol-step">
+          <span class="num">01</span>
+          <h3>Disparo</h3>
+          <p>Sensor ou cerca aciona a central em tempo real.</p>
+        </div>
+        <div class="protocol-step">
+          <span class="num">02</span>
+          <h3>Verificação</h3>
+          <p>Operador confirma o alerta pelas câmeras do local.</p>
+        </div>
+        <div class="protocol-step">
+          <span class="num">03</span>
+          <h3>Acionamento</h3>
+          <p>Ronda é despachada e o cliente é avisado por telefone.</p>
+        </div>
+        <div class="protocol-step">
+          <span class="num">04</span>
+          <h3>Resposta</h3>
+          <p>Equipe no local avalia e registra a ocorrência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="catalog section" id="catalogo">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="h-display">Equipamentos que instalamos.</h2>
+        <p>Linha completa Intelbras, PPA e Hikvision: cada item abaixo pode compor o seu orçamento.</p>
+      </div>
+
+      <div class="filter-row reveal" role="group" aria-label="Filtrar catálogo por categoria">
+        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-filter="cftv" aria-pressed="false">CFTV</button>
+        <button class="filter-btn" data-filter="alarme" aria-pressed="false">Alarme</button>
+        <button class="filter-btn" data-filter="cerca" aria-pressed="false">Cerca &amp; concertina</button>
+        <button class="filter-btn" data-filter="acesso" aria-pressed="false">Controle de acesso</button>
+        <button class="filter-btn" data-filter="portao" aria-pressed="false">Portão eletrônico</button>
+      </div>
+
+      <div class="catalog-grid reveal" id="catalogGrid">
+
+        <article class="feed-card" data-cat="cftv">
+          <div class="feed-label"><span class="cam">CAM 01</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/kit-cftv-900.webp" alt="Kit CFTV Intelbras com 4 câmeras e gravador" loading="lazy" width="900" height="406"></div>
+          <div class="feed-caption"><h3>Kit CFTV 4 câmeras</h3><p>Gravador + câmeras full HD, visão noturna.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Kit%20CFTV%204%20c%C3%A2meras." aria-label="Pedir orçamento: Kit CFTV 4 câmeras">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cftv">
+          <div class="feed-label"><span class="cam">CAM 02</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/camera-intelbras-900.webp" alt="Câmera de segurança Intelbras" loading="lazy" width="590" height="360"></div>
+          <div class="feed-caption"><h3>Câmera bullet HD</h3><p>Instalação interna ou externa.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20C%C3%A2mera%20bullet%20HD." aria-label="Pedir orçamento: Câmera bullet HD">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cftv">
+          <div class="feed-label"><span class="cam">CAM 03</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/cameraim7-intelbras-900.webp" alt="Câmera Intelbras iM7 com sensor de imagem" loading="lazy" width="700" height="478"></div>
+          <div class="feed-caption"><h3>Câmeras Wi-Fi</h3><p>Alta resolução para áreas críticas.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20C%C3%A2meras%20Wi-Fi." aria-label="Pedir orçamento: Câmeras Wi-Fi">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cftv">
+          <div class="feed-label"><span class="cam">CAM 04</span><span class="brand-tag">Hikvision</span></div>
+          <div class="feed-media"><img src="images/cftv-ip-hikvision-900.webp" alt="Linha de câmeras IP Hikvision com gravador em rede" loading="lazy" width="571" height="375"></div>
+          <div class="feed-caption"><h3>Linha CFTV Hikvision</h3><p>Câmeras bullet, dome e speed dome com gravador em rede.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Linha%20CFTV%20Hikvision." aria-label="Pedir orçamento: Linha CFTV Hikvision">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="alarme">
+          <div class="feed-label"><span class="cam">ALM 01</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/sistema-alarme-8000-900.webp" alt="Sistema de alarme sem fio Intelbras 8000" loading="lazy" width="700" height="478"></div>
+          <div class="feed-caption"><h3>Alarme sem fio 8000</h3><p>Sensores sem fio, fácil expansão.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Alarme%20sem%20fio%208000." aria-label="Pedir orçamento: Alarme sem fio 8000">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="alarme">
+          <div class="feed-label"><span class="cam">ALM 02</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/sistema-alarme-simples-900.webp" alt="Sistema de alarme simples Intelbras" loading="lazy" width="900" height="712"></div>
+          <div class="feed-caption"><h3>Alarme residencial</h3><p>Solução direta para casas e apartamentos.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Alarme%20residencial." aria-label="Pedir orçamento: Alarme residencial">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="alarme">
+          <div class="feed-label"><span class="cam">ALM 03</span><span class="brand-tag">Hikvision</span></div>
+          <div class="feed-media"><img src="images/kit-alarme-hikvision-900.webp" alt="Kit de alarme sem fio Hikvision com sensores e sirene" loading="lazy" width="874" height="515"></div>
+          <div class="feed-caption"><h3>Kit alarme Hikvision</h3><p>Central, sensores e sirene para monitoramento sem fio.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Kit%20alarme%20Hikvision." aria-label="Pedir orçamento: Kit alarme Hikvision">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cerca">
+          <div class="feed-label"><span class="cam">PER 01</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/cerca-eletrica-900.webp" alt="Central de cerca elétrica Intelbras com bateria" loading="lazy" width="900" height="900"></div>
+          <div class="feed-caption"><h3>Central de cerca elétrica</h3><p>Choque dissuasivo integrado ao alarme.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Central%20de%20cerca%20el%C3%A9trica." aria-label="Pedir orçamento: Central de cerca elétrica">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cerca">
+          <div class="feed-label"><span class="cam">PER 02</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/kit-cerca-eletrica-900.webp" alt="Kit completo de cerca elétrica Intelbras" loading="lazy" width="667" height="693"></div>
+          <div class="feed-caption"><h3>Kit cerca elétrica</h3><p>Central, hastes e fios para o perímetro.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Kit%20cerca%20el%C3%A9trica." aria-label="Pedir orçamento: Kit cerca elétrica">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="cerca">
+          <div class="feed-label"><span class="cam">PER 03</span><span class="brand-tag">Perimetral</span></div>
+          <div class="feed-media"><img src="images/concertina-2-900.webp" alt="Concertina instalada sobre muro" loading="lazy" width="620" height="620"></div>
+          <div class="feed-caption"><h3>Concertina navalha</h3><p>Barreira física visível para muros e muralhas.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Concertina%20navalha." aria-label="Pedir orçamento: Concertina navalha">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="acesso">
+          <div class="feed-label"><span class="cam">ACS 01</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/controlador-facial-900.webp" alt="Controlador de acesso facial com biometria Intelbras" loading="lazy" width="700" height="478"></div>
+          <div class="feed-caption"><h3>Acesso facial + biometria</h3><p>Reconhecimento facial e digital em um só ponto.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Acesso%20facial%20%2B%20biometria." aria-label="Pedir orçamento: Acesso facial + biometria">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="acesso">
+          <div class="feed-label"><span class="cam">ACS 02</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media"><img src="images/controle-acesso-a-900.webp" alt="Controle de acesso Intelbras com aplicativo" loading="lazy" width="590" height="360"></div>
+          <div class="feed-caption"><h3>Controle de acesso</h3><p>Liberação por app, senha ou cartão.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Controle%20de%20acesso." aria-label="Pedir orçamento: Controle de acesso">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="acesso">
+          <div class="feed-label"><span class="cam">ACS 03</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media feed-media--transparent"><img src="images/porteiro-simples-900.webp" alt="Interfone Intelbras porteiro simples" loading="lazy" width="772" height="998"></div>
+          <div class="feed-caption"><h3>Interfone porteiro</h3><p>Comunicação direta com a portaria.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Interfone%20porteiro." aria-label="Pedir orçamento: Interfone porteiro">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="acesso">
+          <div class="feed-label"><span class="cam">ACS 04</span><span class="brand-tag">Intelbras</span></div>
+          <div class="feed-media feed-media--transparent"><img src="images/video-porteiro-900.webp" alt="Vídeo porteiro Intelbras com tela colorida" loading="lazy" width="502" height="223"></div>
+          <div class="feed-caption"><h3>Vídeo porteiro</h3><p>Veja quem chamou antes de atender.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20V%C3%ADdeo%20porteiro." aria-label="Pedir orçamento: Vídeo porteiro">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="acesso">
+          <div class="feed-label"><span class="cam">ACS 05</span><span class="brand-tag">Hikvision</span></div>
+          <div class="feed-media feed-media--transparent"><img src="images/controle-acesso-hikvision-900.webp" alt="Terminal de controle de acesso facial Hikvision" loading="lazy" width="573" height="1092"></div>
+          <div class="feed-caption"><h3>Acesso facial Hikvision</h3><p>Reconhecimento facial com leitor de cartão integrado.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Acesso%20facial%20Hikvision." aria-label="Pedir orçamento: Acesso facial Hikvision">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="portao">
+          <div class="feed-label"><span class="cam">POR 01</span><span class="brand-tag">PPA</span></div>
+          <div class="feed-media feed-media--transparent"><img src="images/motor-basculante-900.webp" alt="Motor basculante PPA para portão" loading="lazy" width="702" height="1000"></div>
+          <div class="feed-caption"><h3>Motor basculante</h3><p>Para portões de abrir para cima.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Motor%20basculante." aria-label="Pedir orçamento: Motor basculante">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="portao">
+          <div class="feed-label"><span class="cam">POR 02</span><span class="brand-tag">PPA</span></div>
+          <div class="feed-media"><img src="images/motor-deslizante-900.webp" alt="Motor deslizante PPA para portão" loading="lazy" width="900" height="937"></div>
+          <div class="feed-caption"><h3>Motor deslizante</h3><p>Para portões correr / de arrastar.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Motor%20deslizante." aria-label="Pedir orçamento: Motor deslizante">Pedir orçamento</a>
+        </article>
+
+        <article class="feed-card" data-cat="portao">
+          <div class="feed-label"><span class="cam">POR 03</span><span class="brand-tag">PPA</span></div>
+          <div class="feed-media feed-media--transparent"><img src="images/cancela-ppa-900.webp" alt="Cancela automática PPA" loading="lazy" width="818" height="600"></div>
+          <div class="feed-caption"><h3>Cancela automática</h3><p>Controle de entrada para veículos.</p></div>
+          <a class="feed-cta" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%3A%20Cancela%20autom%C3%A1tica." aria-label="Pedir orçamento: Cancela automática">Pedir orçamento</a>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -537,8 +548,7 @@
   <section class="coverage section" id="area-atendimento">
     <div class="container coverage-grid">
       <div class="coverage-copy reveal">
-        <span class="eyebrow">Área de atendimento</span>
-        <h2 class="h-display" style="font-size:clamp(2.2rem,4.6vw,3.2rem); margin-top:.6rem;">Bauru como base, alcance muito além.</h2>
+        <h2 class="h-display" style="font-size:clamp(2.2rem,4.6vw,3.2rem);">Bauru como base, alcance muito além.</h2>
         <p style="margin-top:1rem; color:var(--steel); max-width:44ch;">Visita técnica, instalação e monitoramento cobrindo Bauru e as cidades vizinhas. Passe o olho no radar ao lado: talvez sua cidade já esteja na área.</p>
         <div class="stat-line">
           <div><strong>24h</strong><span>Central ativa</span></div>
@@ -546,23 +556,38 @@
         </div>
       </div>
       <div class="reveal">
-        <div class="radar" id="radar">
+        <div class="radar" id="radar" role="img" aria-label="Mapa ilustrativo da área de atendimento: seis cidades até 50 km de Bauru e três a mais de 100 km.">
           <div class="radar-ring r1"></div>
           <div class="radar-ring r2"></div>
           <div class="radar-ring r3"></div>
+          <span class="radar-scale" style="--y:31.5%;" aria-hidden="true">25 km</span>
+          <span class="radar-scale" style="--y:11.5%;" aria-hidden="true">50 km</span>
+          <span class="radar-scale" style="--y:1.5%;" aria-hidden="true">250 km</span>
           <div class="radar-sweep" aria-hidden="true"></div>
           <div class="radar-core"></div>
           <div class="radar-core-label">Bauru</div>
-          <div class="radar-city" style="--x:50%; --y:18%;" data-delay="0">Agudos<span class="dist">26km</span></div>
-          <div class="radar-city" style="--x:71%; --y:25%;" data-delay="150">Piratininga<span class="dist">25km</span></div>
-          <div class="radar-city" style="--x:89%; --y:43%;" data-delay="300">Piracicaba<span class="dist">137km</span></div>
-          <div class="radar-city" style="--x:78%; --y:66%;" data-delay="450">Pederneiras<span class="dist">32km</span></div>
-          <div class="radar-city" style="--x:64%; --y:88%;" data-delay="600">Campinas<span class="dist">233km</span></div>
-          <div class="radar-city" style="--x:39%; --y:80%;" data-delay="750">Lençóis Paulista<span class="dist">48km</span></div>
-          <div class="radar-city" style="--x:22%; --y:66%;" data-delay="900">Jaú<span class="dist">40km</span></div>
-          <div class="radar-city" style="--x:11%; --y:43%;" data-delay="1050">São Pedro<span class="dist">152km</span></div>
-          <div class="radar-city" style="--x:29%; --y:25%;" data-delay="1200">Duartina<span class="dist">33km</span></div>
+          <span class="radar-dot" style="--x:60.4%; --y:32.0%;" data-delay="0"></span>
+          <span class="radar-dot" style="--x:60.0%; --y:67.3%;" data-delay="150"></span>
+          <span class="radar-dot" style="--x:75.6%; --y:50.0%;" data-delay="300"></span>
+          <span class="radar-dot" style="--x:23.6%; --y:50.0%;" data-delay="450"></span>
+          <span class="radar-dot" style="--x:34.0%; --y:77.7%;" data-delay="600"></span>
+          <span class="radar-dot" style="--x:30.8%; --y:16.7%;" data-delay="750"></span>
+          <span class="radar-dot radar-dot--far" style="--x:88.4%; --y:27.8%;" data-delay="900"></span>
+          <span class="radar-dot radar-dot--far" style="--x:50.0%; --y:95.1%;" data-delay="1050"></span>
+          <span class="radar-dot radar-dot--far" style="--x:92.6%; --y:74.6%;" data-delay="1200"></span>
         </div>
+        <div class="radar-legend">
+          <div>
+            <h3>Até 50 km de Bauru</h3>
+            <p>Piratininga 25 km · Agudos 26 km · Pederneiras 32 km · Duartina 33 km · Jaú 40 km · Lençóis Paulista 48 km</p>
+          </div>
+          <div>
+            <h3>Mais de 100 km</h3>
+            <p>Piracicaba 137 km · São Pedro 152 km · Campinas 233 km</p>
+          </div>
+          <p class="radar-note">Escala ilustrativa: o anel externo comprime as distâncias maiores.</p>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -570,7 +595,6 @@
   <!-- CTA FINAL -->
   <section class="final-cta">
     <div class="container">
-      <span class="eyebrow" style="justify-content:center;">Fale agora com a central</span>
       <h2 class="h-display">Sua segurança não espera até amanhã.</h2>
       <p>Peça um orçamento ou agende uma visita técnica sem custo. Resposta direto no WhatsApp.</p>
       <div class="hero-cta">
@@ -578,6 +602,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.53 3.69-8.21 8.26-8.21 2.2 0 4.27.86 5.83 2.42a8.15 8.15 0 0 1 2.41 5.8c0 4.53-3.69 8.2-8.24 8.2Zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.42 1.02 2.58.12.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
           Chamar no WhatsApp
         </a>
+        <a class="btn btn-ghost" href="tel:+5514997014215">Ligar (14) 99701-4215</a>
       </div>
     </div>
   </section>
@@ -601,7 +626,7 @@
   </div>
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="images/logo-mark-160.webp" alt="Fox Guardian">
+      <img src="images/logo-mark-160.webp" alt="" width="160" height="160">
       <span class="brand-word" style="font-size:1.1rem;">FOX <b>GUARDIAN</b></span>
     </div>
     <nav class="footer-links">
@@ -610,6 +635,7 @@
       <a href="#catalogo">Catálogo</a>
       <a href="#area-atendimento">Cobertura</a>
       <a href="privacidade.html">Privacidade</a>
+      <a class="footer-social" href="tel:+5514997014215">(14) 99701-4215</a>
       <a class="footer-social" target="_blank" rel="noopener" href="https://wa.me/5514997014215">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.53 3.69-8.21 8.26-8.21 2.2 0 4.27.86 5.83 2.42a8.15 8.15 0 0 1 2.41 5.8c0 4.53-3.69 8.2-8.24 8.2Zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.42 1.02 2.58.12.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
         WhatsApp
@@ -635,7 +661,7 @@
   </div>
 </footer>
 
-<a class="wa-float" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fox%20Guardian%20e%20quero%20solicitar%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">
+<a class="wa-float" target="_blank" rel="noopener" href="https://wa.me/5514997014215?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fox%20Guardian%20e%20quero%20solicitar%20um%20or%C3%A7amento." aria-label="Orçamento pelo WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.26-4.32c0-4.53 3.69-8.21 8.26-8.21 2.2 0 4.27.86 5.83 2.42a8.15 8.15 0 0 1 2.41 5.8c0 4.53-3.69 8.2-8.24 8.2Zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.9 2.42 1.02 2.58.12.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
   <span>Orçamento</span>
 </a>
@@ -648,7 +674,7 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/main.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha384-/Mc/2ffICYME94wcPOYwoL99IzpbvFsDTty0/5V5t22x2n26tp8JRSsxKjvgZuZs" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="js/main.js"></script>
 </body>
 </html>
