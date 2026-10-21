@@ -22,7 +22,7 @@ Abra `index.html` diretamente no navegador. Não depende de build nem servidor p
 
 ### Qualidade
 
-Auditoria Lighthouse (ver `site-audit-report.md`): Performance 91 a 96, Acessibilidade 90 a 94, Boas Práticas 100, SEO 100.
+Auditoria Lighthouse (ver `site-audit-report.md`, reexecutada em out/2026): Performance 91 a 96, Acessibilidade 90 a 94, Boas Práticas 100, SEO 100.
 
 ## Estrutura do projeto
 
@@ -32,6 +32,9 @@ Auditoria Lighthouse (ver `site-audit-report.md`): Performance 91 a 96, Acessibi
 │   └── styles.css          # design system (tokens, componentes, responsividade)
 ├── js/
 │   └── main.js              # interações: menu, filtros, accordion, animações de scroll
+├── api/visits.js           # contador de visitas (Vercel KV; POST conta, GET lê)
+├── vercel.json             # headers de segurança e cache
+├── robots.txt, sitemap.xml
 ├── images/                 # imagens otimizadas (WebP), prontas para produção
 ├── tools/                  # scripts de otimização de imagem e testes visuais
 │   ├── optimize.js          # pipeline sharp
@@ -59,7 +62,7 @@ node screenshot.js
 ## Seções da página
 
 1. **Hero**: proposta de valor e imagem real da central de monitoramento
-2. **Marcas parceiras**: Intelbras e PPA, fundo removido, direto sobre o card escuro
+2. **Marcas parceiras**: Intelbras, PPA e Hikvision, fundo removido, direto sobre o card escuro
 3. **Sobre**: foto real da fachada da loja
 4. **Serviços**: apresentados como zonas de um painel de alarme
 5. **Protocolo de resposta**: o que acontece quando o alarme dispara, em 4 etapas

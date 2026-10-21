@@ -4,7 +4,20 @@ URL testada: http://localhost:5510
 
 Gerado em: 2026-08-19T03:04:09.419Z
 
-## Resumo de notas (0-100)
+## Reauditoria 2026-10-20 (Lighthouse via DevTools, localhost)
+
+| Categoria | Mobile | Desktop |
+|---|---|---|
+| Acessibilidade | 100 | 100 |
+| Best Practices | 96 | 96 |
+| SEO | 100 | 100 |
+| Agentic Browsing | 99 | 100 |
+
+CLS desktop caiu de 0,10 para dentro do limite (fontes pré-carregadas, CSS de fonte sem swap tardio). Único alerta restante: erro 405 em /api/visits, que só existe no localhost (sem a função Vercel); em produção responde normal.
+
+---
+
+## Resumo de notas anterior (0-100, 2026-08-19)
 
 | Categoria | Mobile | Desktop |
 |---|---|---|

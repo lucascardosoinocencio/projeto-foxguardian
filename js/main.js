@@ -41,7 +41,7 @@
   const onScroll = () => {
     header.classList.toggle('is-scrolled', window.scrollY > 12);
   };
-  onScroll();
+  requestAnimationFrame(onScroll);
   window.addEventListener('scroll', onScroll, { passive: true });
 
   const navToggle = document.getElementById('navToggle');
@@ -140,7 +140,10 @@
       return columns;
     };
 
-    fetch('/api/visits', { cache: 'no-store' })
+    // Conta 1x por sessão (POST); recarregar a página só lê o valor (GET).
+    let counted = false;
+    try { counted = sessionStorage.getItem('fg-visit-counted') === '1'; } catch (e) {}
+    fetch('/api/visits', { method: counted ? 'GET' : 'POST', cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error('bad response');
         return res.json();
@@ -148,6 +151,7 @@
       .then((data) => {
         const value = data && typeof data.value === 'number' ? data.value : null;
         if (value === null) throw new Error('no value');
+        try { sessionStorage.setItem('fg-visit-counted', '1'); } catch (e) {}
 
         const columns = buildOdometer(value.toLocaleString('pt-BR'));
         visitCounter.classList.add('is-visible');
