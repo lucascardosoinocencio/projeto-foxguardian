@@ -289,7 +289,11 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
 /* ---------- painel de zonas (serviços) ---------- */
 .zones{ background:var(--void); border-block:1px solid var(--line); }
 .zone-list{
-  display:grid; grid-template-columns:repeat(4, 1fr); border-top:1px solid var(--line);
+  --gutter:clamp(1.25rem, 4vw, 2.5rem);
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  width:min(calc(100% - 2*var(--gutter)), calc(var(--container) - 2*var(--gutter))); /* same edges as .container content */
+  margin:0 auto clamp(3rem,6vw,4.5rem);
+  border-top:1px solid var(--line); border-left:1px solid var(--line);
 }
 .zone{
   padding:1.9rem 1.6rem; border-right:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -302,7 +306,7 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
 }
 .zone-index .dot{ width:6px; height:6px; border-radius:50%; background:var(--safe); }
 .zone h3{
-  font-family:var(--display); text-transform:uppercase; font-size:1.55rem; margin-top:.9rem; letter-spacing:.01em;
+  font-family:var(--display); text-transform:uppercase; font-size:1.45rem; line-height:1.05; margin-top:.9rem; letter-spacing:.01em; text-wrap:balance;
 }
 .zone p{ margin-top:.5rem; font-size:.9rem; color:var(--steel-dim); }
 
