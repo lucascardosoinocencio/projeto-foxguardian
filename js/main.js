@@ -77,13 +77,17 @@
   if (heroVideo) {
     heroVideo.muted = true;
     const still = matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData;
-    const ready = () => heroVideo.classList.add('is-ready');
-    heroVideo.readyState >= 2 ? ready() : heroVideo.addEventListener('loadeddata', ready, { once: true });
-    if (still) {
-      heroVideo.pause();
+    if (!still) {
+      /* poster is the LCP-safe first frame; the video loads only after the page, small file on phones */
+      const start = () => {
+        heroVideo.src = matchMedia('(max-width: 768px)').matches ? heroVideo.dataset.srcM : heroVideo.dataset.src;
+        heroVideo.addEventListener('loadeddata', () => heroVideo.classList.add('is-ready'), { once: true });
+        new IntersectionObserver(([e]) => (e.isIntersecting ? heroVideo.play().catch(() => {}) : heroVideo.pause()))
+          .observe(heroVideo);
+      };
+      document.readyState === 'complete' ? start() : addEventListener('load', start, { once: true });
     } else {
-      new IntersectionObserver(([e]) => (e.isIntersecting ? heroVideo.play().catch(() => {}) : heroVideo.pause()))
-        .observe(heroVideo);
+      heroVideo.classList.add('is-ready'); /* show the still poster */
     }
   }
 

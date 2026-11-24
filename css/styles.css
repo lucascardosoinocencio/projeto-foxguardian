@@ -721,3 +721,11 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
   .reviews-summary{ flex-direction:column; align-items:flex-start; }
   .reviews-arrow{ display:none; }
 }
+
+/* ---------- touch targets: 44px on touch screens (review dots stay 24px, the WCAG 2.2 AA floor) ---------- */
+@media (pointer:coarse){
+  .nav-toggle{ width:44px; height:44px; }
+  .filter-btn{ min-height:44px; }
+  .footer-links a, .footer-map-link, .footer-social, .footer-credit{ min-height:44px; min-width:44px; display:inline-flex; align-items:center; }
+  .footer-links{ row-gap:0; }
+}
